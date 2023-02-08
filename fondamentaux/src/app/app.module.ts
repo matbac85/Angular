@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MonPremierComponentComponent } from './components/mon-premier-component/mon-premier-component.component';
+import { AuthorsComponent } from './componantAuthors/authors/authors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MonPremierComponentComponent
+    MonPremierComponentComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule
