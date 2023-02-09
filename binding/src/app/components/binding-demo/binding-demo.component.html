@@ -1,0 +1,50 @@
+<input type="text" [disabled] = "isNotAllowedToWrite" (keyup.enter)="changeUserName(unernameInput)" #unernameInput/>
+
+<!-- lorsqu'on met le disabled entre [], on lui dit que isAllowedToWrite est du JS 
+
+Comme il s'agit d'une boléenne, on peut employé le ! pour inverser le résultat
+-->
+
+<!-- Si isPremium est true, on ajoute la classe .premium et on peut styliser dans .css-->
+
+<!-- On peut utiliser une ternaire directement dans l'HTML : [style.backgroundColor]="isPremium ? 'lavender' : 'none'" -->
+
+<p>
+    Le binding à deux sens.
+</p>
+
+<input type="text" [disabled] = "isNotAllowedToWrite" [(ngModel)] = "username"/>
+
+<!-- avec [] et () Js vers HTML et HTML vers JS. 
+
+    ng Model (lie la valeur de mon input à la variable dans ma classe ), mais n'est pas connu comme propriété d'un input. On doit ajouter FormsModule dans nos propriéts d'imports.
+
+    On n'a pas de #, on n'a pas d'élément bindé et on n'a pas de fonction à faire.
+-->
+
+<p [class.premium] = "isPremium" class="bidon" [style.backgroundColor]="isPremium ? 'lavender' : 'none'">
+    {{username}}
+</p>
+
+
+
+<p [ngClass]="{
+    premium: isPremium,
+    bidon: isPremium
+}" [ngStyle]="{
+    border: isPremium ? '1px solid purple' : 'none',
+    fontSize: isPremium ? '32px' : '1em'
+}">
+    Respectez les loutres svp.
+    Le reste, c'est pas grave.
+</p>
+
+<!-- On lie un événement dans HTML
+    On écrit des () pour lier à un événement. On nomme l'événement dans les parenthèses. Par ex: click. Entre les "", je fais mon appel de fonction.
+
+    Le keyup.enter = cela s'active au keyup (je lève le doigt du clavier) mais sur la touche enter
+
+-->
+ <!-- Avec le #, on crée une variable qui n'existe que dans mon HTML. -->
+
+ <!--  -->
