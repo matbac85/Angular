@@ -1,0 +1,5 @@
+Créer un composant favori (favourite)
+    Par défaut, il va afficher une étoile vide.
+    Quand on clique dessus, l'étoile vide devient une étoile remplie.
+    ★ : étoile pleine
+    ☆ :  étoile vide

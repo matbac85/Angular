@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BindingDemoComponent } from './components/binding-demo/binding-demo.component';
+import { FavouriteComponent } from './components/favourite/favourite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BindingDemoComponent
+    BindingDemoComponent,
+    FavouriteComponent
   ],
   imports: [
     BrowserModule,

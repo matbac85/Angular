@@ -1,0 +1,5 @@
+<!-- <p (click)="showFullStar()">{{pContent}}</p> -->
+
+<p (click)="toggleIsFavourite()">{{star}}</p>
+
+<p (click)="isEmpty = !isEmpty" [innerHTML]="isEmpty ? '☆' : '★'"></p>
