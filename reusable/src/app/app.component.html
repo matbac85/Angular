@@ -1,0 +1,23 @@
+<app-post-card postTitle="Mon nouveau title"(clickTitle)="handleClickTitle($event)">
+  <ng-container class="content">
+    <span>Mon contenu magique</span>
+  </ng-container>
+</app-post-card>
+
+<ng-template #cat>
+  <pre>
+  /\_/\           ___
+  = o_o =_______    \ \  -Julie Rhodes-
+   __^      __(  \.__) )
+(@)<_____>__(_____)____/
+  </pre>
+</ng-template>
+
+<ng-template #board>
+  J'ai pas trouvé d'ascii
+  pour représenter un tableau, désolée
+</ng-template>
+
+<div *ngIf=" 1 === 1 then cat else board">
+  Ce texte ne sera jamais affiché
+</div>

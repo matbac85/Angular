@@ -1,0 +1,21 @@
+<div>
+    <h3 (click)="clickedTitle()">
+        {{ title }}
+    </h3>
+
+    <!-- //comment passer de l'HTML à nos composants ?
+    On utilise la balise 'ng content'
+    -->
+
+    <!-- pour ajouter du contenu html à différents endroits, on utilise l'attribut select 
+    
+    selecteur qui va rechercher le contenu qui est passé entre deux balises
+    -->
+
+    <!-- dans ce cas-ci, il va chercher un élément avec la classe content. -->
+    <p>
+        <ng-content select=".content">
+
+        </ng-content>
+    </p>
+</div>
