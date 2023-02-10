@@ -1,0 +1,46 @@
+<!-- ngIF émet une condition. ngIf est une directive, un composant sans html. 
+  On n'utilise que du js pour changer son comportement.
+  Lorsque celle-ci est fausse, l'html n'apparaît pas. 
+  Dans le cas contraire, l'html apparaît.
+-->
+
+<div *ngIf="false">
+  Ce texte est caché parce que ma condition est fausse.
+</div>
+
+<div *ngIf="true">
+  Ce texte n'est pas caché parce que ma condition est vraie. 
+</div>
+
+<!-- ngFor : Pour chaque élément dans mon tableau colors, on vient créer un élément 
+  <li> dans lequel on affiche l'élément du tableau 'colors'-->
+
+<ul>
+  <li *ngFor="let color of colors; index as i; even as isEven"[ngStyle]="{color: colors[i]}">
+      {{ color }}
+      <p *ngIf="isEven">
+        cette couleur se trouve à index pair.
+      </p>
+  </li>
+</ul>
+
+<div [ngSwitch]="viewmode">
+  <p *ngSwitchCase="'list'">
+    Vue liste
+  </p>
+  <p *ngSwitchCase="'kanban'">
+    Vue Kanban
+  </p>
+  <p *ngSwitchDefault="">
+    Vue Cheh
+  </p>
+</div>
+<button (click)="viewmode = 'list'">LIST</button>
+<button (click)="viewmode = 'kanban'">KANBAN</button>
+
+<p>{{ "mArIO" | lowercase | uppercase }}</p>
+
+<!-- currency met automatiquement la monnaie utilisée. On peut utiliser un argument pour changer la monnaie par défaut qui est en dollars. -->
+<p>{{ "42" | currency : 'EUR' }}</p>
+
+<p>{{ "la loutre de Jemappes" | spongebob : 'Imaginons' : 'Que' : 42 }}</p>
