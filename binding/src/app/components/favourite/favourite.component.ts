@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-enum Star {
-  EMPTY = '☆',
-  FILLED = '★'
+enum Cat {
+  EMPTY = '',
+  FILLED = 'random texte'
 }
 
 @Component({

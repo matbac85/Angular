@@ -1,4 +1,4 @@
-<app-post-card postTitle="Mon nouveau title"(clickTitle)="handleClickTitle($event)">
+<!-- <app-post-card postTitle="Mon nouveau title"(clickTitle)="handleClickTitle($event)">
   <ng-container class="content">
     <span>Mon contenu magique</span>
   </ng-container>
@@ -20,4 +20,59 @@
 
 <div *ngIf=" 1 === 1 then cat else board">
   Ce texte ne sera jamais affiché
-</div>
+</div> -->
+
+<!-- <app-zippy>
+  <p class="content">
+    trololo
+  </p>
+</app-zippy> -->
+
+<app-zippy title="Ma collection de loutres" manager="Romain" [isContentVisible]="true" [clickCount]="clickCountPerAnimal.otter" (titleClicked)="updateClickCount('otter')">
+  <ng-container>
+    <p>La loutre de chantier</p>
+    <p>La loutre clean code</p>
+    <button>
+      Abonnez-vous aux loutres
+    </button>
+  </ng-container>
+  <pre>
+      .----.__
+      / c  ^  _`;
+      |     .--'
+      \   (
+      /  -.\
+      / .   \
+    /  \    |
+    ;    `-. `.
+    |      /`'.`.
+    |      |   \ \
+    |    __|    `'
+    ;   /   \
+  ,'        |
+  (_`'---._ /--,
+    `'---._`'---..__
+  jgs      `''''--, )
+            _.-'`,`
+              ````
+  </pre>
+</app-zippy>
+
+<app-zippy title="Ma collection de bébés hibou" manager="Christophe" [clickCount]="clickCountPerAnimal.owl" (titleClicked)="updateClickCount('owl')">
+  <ng-container>
+  <p>bébé hibou</p>
+  </ng-container>
+  <pre>
+    __________
+    / ___  ___ \
+   / / @ \/ @ \ \
+   \ \___/\___/ /\
+    \____\/____/||
+    /     /\\\\\//
+    |     |\\\\\\
+    \      \\\\\\
+     \______/\\\\
+      _||_||_
+       -- --
+  </pre>
+</app-zippy>

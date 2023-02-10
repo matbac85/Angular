@@ -1,0 +1,24 @@
+<!-- <h3 (click)="clickTitle()">
+    {{ title }}
+</h3>
+    <p [hidden]="isHidden">
+        <ng-content select=".content">
+
+        </ng-content>
+    </p> -->
+
+
+    <!-- CORRECTIF -->
+
+    <div>
+        <h3 (click) = "toggleContentVisibility()">
+            {{ title }} - {{ manager }}
+        </h3>
+        <p>
+            déjà cliqué {{ clickCount }} fois !! ^^
+        </p>
+        <div [hidden]="!isContentVisible">
+            <ng-content></ng-content>
+
+        </div>
+    </div>
